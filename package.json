@@ -35,5 +35,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "framer-motion": "^12.23.24",
+    "react-scroll": "^1.9.3",
+    "sass": "^1.93.2"
   }
 }

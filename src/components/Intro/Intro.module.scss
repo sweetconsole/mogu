@@ -1,0 +1,75 @@
+@use "../../assets/styles/variables.scss";
+
+.section {
+    display: grid;
+    grid-template-columns: 640px 644px;
+    justify-content: space-between;
+}
+
+.left_block {
+    padding: 24px 24px 56px 24px;
+    color: #222FDC;
+}
+
+.title {
+    font-family: variables.$font-family-secondary;
+    font-weight: variables.$font-weight-medium;
+    font-size: 90px;
+    line-height: 80px;
+    letter-spacing: -2px;
+    
+    margin-bottom: 24px;
+}
+
+.description {
+    font-family: variables.$font-family-primary;
+    font-family: variables.$font-weight-regular;
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+}
+
+.features {
+
+}
+
+.feature {
+
+}
+
+.field {
+
+}
+
+.input {
+
+}
+
+.button {
+    
+}
+
+.right_block {
+    background-color: #222FDC;
+    border-radius: 30px;
+}
+
+.subtitle {
+
+}
+
+.users {
+
+}
+
+.user {
+
+}
+
+.user_image {
+
+}
+
+.image {
+
+}

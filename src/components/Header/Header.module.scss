@@ -1,0 +1,65 @@
+@use "../../assets/styles/variables.scss";
+
+.header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    padding: 8px 0;
+    font-family: variables.$font-family-primary;
+    font-weight: variables.$font-weight-medium;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1312px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block {
+    display: flex;
+    gap: 24px;
+}
+
+.logo {
+    width: 160px;
+    height: 64px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    padding: 0 16px;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    color: #5B605C;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    line-height: 48px;
+    letter-spacing: -0.1px;
+    padding: 0 32px;
+    border-radius: 30px;
+    border: 3px solid black;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: black;
+        background-color: transparent;
+    }
+}
