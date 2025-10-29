@@ -66,6 +66,12 @@ export const introAssets = {
                 "imgAttr": {
                     "src": image("arrows/aqua_arrow.svg"),
                 },
+                "sources": [
+                    {
+                        "srcSet": image("arrows/aqua_arrow_mobile.svg"),
+                        "media": "(max-width: 1440px)",
+                    },
+                ],
             },
             "tag": "button",
             "type": "submit",
@@ -74,7 +80,8 @@ export const introAssets = {
     "rightBlock": {
         "title": "Совместная работа",
         "avatars": [
-            {
+            {   
+                "duration": 0.3,
                 "image": {
                     "imgAttr": {
                         "src": image("intro/avatars/1_desktop.png"),
@@ -86,10 +93,26 @@ export const introAssets = {
                         },
                     ],
                 },
-                "message": "А это вы",
-                "type": "footnote"
+                "message": {
+                    "text": "А это вы",
+                    "type": "footnote",
+                    "color": "#1839CF",
+                    "duration": 1.8,
+                    "cursor":  {
+                        "imgAttr": {
+                            "src": image("intro/cursor.svg"),
+                        },
+                        "sources": [
+                            {
+                                "srcSet": image("intro/cursor_mobile.svg"),
+                                "media": "(max-width: 1440px)",
+                            },
+                        ],
+                    },
+                },
             },
-            {
+            {   
+                "duration": 0.6,
                 "image": {
                     "imgAttr": {
                         "src": image("intro/avatars/2_desktop.png"),
@@ -104,6 +127,7 @@ export const introAssets = {
             },
 
             {
+                "duration": 0.9,
                 "image": {
                     "imgAttr": {
                         "src": image("intro/avatars/3_desktop.png"),
@@ -114,11 +138,16 @@ export const introAssets = {
                             "media": "(max-width: 1440px)",
                         },
                     ],
-                },
-                "message": "Это ваш милейший коллега ",
-                "type": "bubble"
+                },           
+                "message": {
+                    "text": "Это ваш милейший коллега ",
+                    "type": "bubble",
+                    "color": "#E36D2F",
+                    "duration": 2.1,
+                }
             },
             {
+                "duration": 1.2,
                 "image": {
                     "imgAttr": {
                         "src": image("intro/avatars/4_desktop.png"),
@@ -132,6 +161,7 @@ export const introAssets = {
                 },
             },
             {
+                "duration": 1.5,
                 "image": {
                     "imgAttr": {
                         "src": image("intro/avatars/plus_desktop.png"),
@@ -158,7 +188,17 @@ export const introAssets = {
         },
     },
     "downArrow": {
-        "image": image("arrows/down_arrow.png"),
+        "image": {
+            "imgAttr": {
+                "src": image("arrows/down_arrow.svg"),
+            },
+            "sources": [
+                {
+                    "srcSet": image("intro/pen_mobile.png"),
+                    "media": "(max-width: 1440px)",
+                },
+            ],
+        },
         "link": "chars",
         "tag": "a"
     }, 

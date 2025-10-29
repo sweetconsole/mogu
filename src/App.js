@@ -6,6 +6,11 @@ function App() {
     <>
       <Header />
       <Intro />
+
+      <div id="chars" style={{ height: "1000px", marginTop: "200px" }}>Букавы</div>
+      <div id="about" style={{ height: "1000px" }}>О Нас</div>
+      <div id="cases" style={{ height: "1000px" }}>Кейсы</div>
+      <div id="feedback" style={{ height: "1000px" }}>Обратная связь</div>
       {/* <Chars /> */}
       {/* <AboutUs /> */}
       {/* <Separator /> */}
