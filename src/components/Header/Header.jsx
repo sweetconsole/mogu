@@ -3,6 +3,7 @@ import { useState } from "react"
 import { headerAssets } from "../../constants/copyright"
 import Container from "../Container/Container"
 import Picture from "../Picture/Picture"
+import Menu from "./Menu/Menu"
 import styles from "./Header.module.scss"
 
 const Header = () => {
@@ -10,10 +11,18 @@ const Header = () => {
 
   const changeViewMenu = () => {
     setViewMenu(!viewMenu)
+
+    if (viewMenu) {
+			document.body.style.overflow = "scroll"
+		} else {
+			document.body.style.overflow = "hidden"
+		}
   }
 
   return (
     <header className={styles.header}>
+      <Menu viewMenu={viewMenu} changeViewMenu={changeViewMenu} />
+
       <Container customStyles={styles.inner}>
         <div className={styles.block}>
           <Link 
