@@ -17,15 +17,21 @@ const Intro = () => {
             ))}
           </ul>
 
-          <div className={styles.field}>
+          <form  className={styles.field}>
             <input className={styles.input} {...introAssets.leftBlock.input} />
             <button 
               className={styles.button} 
               type={introAssets.leftBlock.button.type}
             >
                 {introAssets.leftBlock.button.text}
+
+                <Picture
+                  className={styles.image}
+                  imgAttr={introAssets.leftBlock.button.arrow.imgAttr}
+                  // sources={introAssets.rightBlock.image.sources}
+                />
             </button>
-          </div>
+          </form>
         </div>
 
         <div className={styles.right_block}>

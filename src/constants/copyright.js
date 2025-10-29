@@ -62,7 +62,11 @@ export const introAssets = {
         },
         "button": {
             "text": "Начать",
-            "arrow": image("arrows/aqua_arrow.svg"), 
+            "arrow": {
+                "imgAttr": {
+                    "src": image("arrows/aqua_arrow.svg"),
+                },
+            },
             "tag": "button",
             "type": "submit",
         }
