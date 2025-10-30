@@ -1,0 +1,132 @@
+@use "../../../assets/styles/variables.scss";
+
+.header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    padding: 8px 0;
+    z-index: 25;
+    font-family: variables.$font-family-primary;
+    font-weight: variables.$font-weight-medium;
+
+    @media (max-width: 1440px) {
+        padding: 13px 0;
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block {
+    display: flex;
+    gap: 24px;
+}
+
+.logo {
+    width: 160px;
+    height: 64px;
+
+    @media (max-width: 1440px) {
+        width: 130px;
+        height: 53px;
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1440px) {
+        display: none;
+    }
+}
+
+.link {
+    padding: 0 16px;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    color: #5B605C;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    line-height: 48px;
+    letter-spacing: -0.1px;
+    padding: 0 32px;
+    border-radius: 30px;
+    border: 3px solid black;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: black;
+        background-color: transparent;
+    }
+
+    @media (max-width: 1440px) {
+        display: none;
+    }
+}
+
+@mixin button_menu {
+    width: 39px;
+    height: 39px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+    gap: 8px;
+    padding: 0;
+    border: none;
+    background-color: transparent; 
+    display: none;
+
+    .button_menu_line {
+        width: 100%;
+        height: 2px;
+        background-color: #222FDC;
+        transition: all .2s ease-in-out;
+    }
+
+     @media (max-width: 1440px) {
+        display: flex;
+    }
+}
+
+.button_menu {
+    @include button_menu();
+}
+
+.button_menu_active {
+    @include button_menu();
+
+    .button_menu_line:nth-child(1) {
+        transform: rotate(45deg) 
+                   translatex(6px) 
+                   translateY(7px);
+        transform-origin: center;
+    }
+
+    .button_menu_line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .button_menu_line:nth-child(3) {
+        transform: rotate(-45deg) 
+                   translatex(6px) 
+                   translateY(-8px);
+        transform-origin: center;
+    }
+}

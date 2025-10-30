@@ -1,21 +1,21 @@
-import Header from "./components/Header/Header"
-import Intro from "./components/Intro/Intro"
+import Header from "./components/widgets/Header/Header"
+import Intro from "./components/widgets/Intro/Intro"
+import Chars from "./components/widgets/Chars/Chars"
+import AboutUs from "./components/widgets/AboutUs/AboutUs";
+import Separator from "./components/widgets/Separator/Separator";
+import Cases from "./components/widgets/Cases/Cases";
+import Feedback from "./components/widgets/Feedback/Feedback";
 
 function App() {
   return (
     <>
       <Header />
       <Intro />
-
-      <div id="chars" style={{ height: "1000px", marginTop: "200px" }}>Букавы</div>
-      <div id="about" style={{ height: "1000px" }}>О Нас</div>
-      <div id="cases" style={{ height: "1000px" }}>Кейсы</div>
-      <div id="feedback" style={{ height: "1000px" }}>Обратная связь</div>
-      {/* <Chars /> */}
-      {/* <AboutUs /> */}
-      {/* <Separator /> */}
-      {/* <Cases /> */}
-      {/* <Feedback /> */}
+      <Chars />
+      <AboutUs />
+      <Separator />
+      <Cases />
+      <Feedback />
     </>
   );
 }

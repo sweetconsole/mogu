@@ -1,0 +1,13 @@
+@use "../../../assets/styles/variables.scss";
+
+.section {
+    display: grid;
+    grid-template-columns: 640px 644px;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: 1440px) {
+        display: block;
+    }
+}
+

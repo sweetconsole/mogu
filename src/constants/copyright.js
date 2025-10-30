@@ -207,8 +207,9 @@ export const introAssets = {
 export const charsAssets = {
     "shadows": {
         "imgAttr": {
-        "src": image("chars/shadows"),
-    }},
+            "src": image("chars/shadows.svg"),
+        },
+    },
     "people": [
         {
             "image": {
@@ -226,11 +227,11 @@ export const charsAssets = {
         {
             "image": {
                 "imgAttr": {
-                    "src": image("people/people_1_desktop.svg"),
+                    "src": image("people/people_2_desktop.svg"),
                 },
                 "sources": [
                     {
-                        "srcSet": image("people/people_1_mobile.svg"),
+                        "srcSet": image("people/people_2_mobile.svg"),
                         "media": "(max-width: 1440px)",
                     },
                 ],
@@ -239,11 +240,11 @@ export const charsAssets = {
         {
             "image": {
                 "imgAttr": {
-                    "src": image("people/people_1_desktop.svg"),
+                    "src": image("people/people_3_desktop.svg"),
                 },
                 "sources": [
                     {
-                        "srcSet": image("people/people_1_mobile.svg"),
+                        "srcSet": image("people/people_3_mobile.svg"),
                         "media": "(max-width: 1440px)",
                     },
                 ],
@@ -252,11 +253,11 @@ export const charsAssets = {
         {
             "image": {
                 "imgAttr": {
-                    "src": image("people/people_1_desktop.svg"),
+                    "src": image("people/people_4_desktop.svg"),
                 },
                 "sources": [
                     {
-                        "srcSet": image("people/people_1_mobile.svg"),
+                        "srcSet": image("people/people_4_mobile.svg"),
                         "media": "(max-width: 1440px)",
                     },
                 ],
@@ -265,11 +266,11 @@ export const charsAssets = {
         {
             "image": {
                 "imgAttr": {
-                    "src": image("people/people_1_desktop.svg"),
+                    "src": image("people/people_5_desktop.svg"),
                 },
                 "sources": [
                     {
-                        "srcSet": image("people/people_1_mobile.svg"),
+                        "srcSet": image("people/people_5_mobile.svg"),
                         "media": "(max-width: 1440px)",
                     },
                 ],
@@ -311,18 +312,18 @@ export const aboutAssets = [
         "description": "единая строка поиска для всех проектов - где бы ни была задача, вы быстро ее найдете",
         "image": {
             "imgAttr": {
-                "src": image("about/about_3_desktop.svg"),
+                "src": image("about/about_1_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("about/about_3_desktop.svg"),
+                    "srcSet": image("about/about_1_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
         },
         "colors": {
             "background": "#FBEAEF",
-            "text": "#3C711E",
+            "color": "#3C711E",
         },
     },
     {
@@ -330,18 +331,18 @@ export const aboutAssets = [
         "description": "фиксируйте новые идеи в один клик, прикрепляйте файлы и подробные описания сути задач",
         "image": {
             "imgAttr": {
-                "src": image("about/about_3_desktop.svg"),
+                "src": image("about/about_2_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("about/about_3_desktop.svg"),
+                    "srcSet": image("about/about_2_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
         },
         "colors": {
             "background": "#000000",
-            "text": "#C3C3C3",
+            "color": "#C3C3C3",
             "title": "#FFFFFF",
         },
     },
@@ -350,42 +351,76 @@ export const aboutAssets = [
         "description": "задачи удобно структурировать с помощью чек-листов, меток и пользовательских полей",
         "image": {
             "imgAttr": {
-                "src": image("about/about_3_desktop.svg"),
+                "src": image("about/about_3_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("about/about_3_desktop.svg"),
+                    "srcSet": image("about/about_3_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
         },
         "colors": {
             "background": "#4F23AE",
-            "text": "#72BDF8",
+            "color": "#72BDF8",
         },
         "points": [
-            "обновляйте статус задачи ",
-            "следите за сроками дедлайнов",
-            "отправляйте завершенные задачи в архив",
+            {   
+                "type": "text",
+                "text": "обновляйте статус задачи ",
+            },
+            {
+                "arrow": {
+                    "imgAttr": {
+                        "src": image("arrows/white_arrow.svg"),
+                    },
+                    "sources": [
+                        {
+                            "srcSet": image("arrows/white_arrow_mobile.svg"),
+                            "media": "(max-width: 1440px)",
+                        },
+                    ],
+                },
+            },
+            {
+                "text": "следите за сроками дедлайнов",
+            },
+
+            {
+                "type": "arrow",
+                "arrow": {
+                    "imgAttr": {
+                        "src": image("arrows/white_arrow.svg"),
+                    },
+                    "sources": [
+                        {
+                            "srcSet": image("arrows/white_arrow_mobile.svg"),
+                            "media": "(max-width: 1440px)",
+                        },
+                    ],
+                },
+            },
+            {
+                "text": "отправляйте завершенные задачи в архив",
+            },
         ],
-        "arrow": image("arrows/white_arrow.svg"),
     },
     {
         "title": "Совместная работа на одной доске ",
         "description": "приглашайте коллег, бизнес-партнеров и заказчиков ",
         "colors": {
             "background": "#F7FF8F",
-            "text": "#000000",
+            "color": "#000000",
         },
     },
     {
         "image": {
             "imgAttr": {
-                "src": image("about/about_3_desktop.svg"),
+                "src": image("about/about_5_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("about/about_3_desktop.svg"),
+                    "srcSet": image("about/about_5_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
@@ -399,19 +434,19 @@ export const aboutAssets = [
         "description": "устанавливайте персональный фон для каждого проекта ",
         "colors": {
             "background": "#DDEFD5",
-            "text": "#DF6741",
+            "color": "#DF6741",
         },
     },
 ]   
 
 export const separatorAsset = {
     "imgAttr": {
-        "src": image("separator/separator_desktop.svg"),
+        "src": image("separator/separator_desktop.png"),
         alt: "Separator"
     },
     "sources": [
         {
-            "srcSet": image("separator/separator_mobile.svg"),
+            "srcSet": image("separator/separator_mobile.png"),
             "media": "(max-width: 1440px)",
         },
     ],
@@ -421,14 +456,14 @@ export const casesAssets = [
     {
         "title": "Создание лендинга",
         "description": "Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям",
-        "point": "Product marketing",
+        "topic": "Product marketing",
         "image": {
             "imgAttr": {
-                "src": image("cases/case_1_desktop.svg"),
+                "src": image("cases/case_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("cases/case_1_mobile.svg"),
+                    "srcSet": image("cases/case_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
@@ -437,14 +472,14 @@ export const casesAssets = [
     {
         "title": "Продвижение",
         "description": "Передайте в работу исполнителям, заведите доску, зафиксируйте все идеи на доске, проводите брейншторм, пригласят маркетолога, дизайнеров и верстальщика, расставьте приоритеты идей — с помощью меток или отдельных колонок, наиболее приоритетным назначьте дедлайны, занесите в колонку «Бэклог».",
-        "point": "Growth marketing",
+        "topic": "Growth marketing",
         "image": {
             "imgAttr": {
-                "src": image("cases/case_1_desktop.svg"),
+                "src": image("cases/case_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("cases/case_1_mobile.svg"),
+                    "srcSet": image("cases/case_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
@@ -452,15 +487,15 @@ export const casesAssets = [
     },
     {
         "title": "Креативность",
-        "description": "Создайте доску, приглашайте дизайнера, верстальщика и маркетолога, организуйте сессию мозгового штурма, фиксируйте полученные идеи на доске, перенесите их в колонку «Бэклог», ранжируйте идеи с помощью маркеров или тематических столбцов, обозначьте важнейшие задания сроками завершения и делегируйте выполнение сотрудникам.",
-        "point": "Creative",
+        "description": "Создайте доску, приглашайте дизайнера, верстальщика и маркетолога, организуйте сессию мозгового штурма, фиксируйте идеи на доске, перенесите их в «Бэклог», ранжируйте с помощью маркеров или тематических столбцов, обозначьте задания сроками завершения и выполнение сотрудникам.",
+        "topic": "Creative",
         "image": {
             "imgAttr": {
-                "src": image("cases/case_1_desktop.svg"),
+                "src": image("cases/case_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("cases/case_1_mobile.svg"),
+                    "srcSet": image("cases/case_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
@@ -468,15 +503,15 @@ export const casesAssets = [
     },
     {
         "title": "Маркетинг",
-        "description": "Пригласите дизайнера, верстальщика и маркетолога, проведите мозговой штурм, заведите доску, зафиксируйте идеи на доске, добавьте их в колонку «Бэклог», приоритизируйте с помощью меток или колонок, самые важные установите сроки исполнения и передайте в работу специалистам.",
-        "point": "Marketing",
+        "description": "Пригласите дизайнера, верстальщика и маркетолога, проведите мозговой штурм, заведите доску, зафиксируйте идеи на доске, добавьте их в колонку «Бэклог», приоритизируйте с помощью меток или колонок, самые важные установите сроки исполнения и передайте в работу специалистам  и поручите работ участникам команды.",
+        "topic": "Marketing",
         "image": {
             "imgAttr": {
-                "src": image("cases/case_1_desktop.svg"),
+                "src": image("cases/case_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("cases/case_1_mobile.svg"),
+                    "srcSet": image("cases/case_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
@@ -485,15 +520,15 @@ export const casesAssets = [
     },
     {
         "title": "Реклама",
-        "description": "Запустите процесс организации доски, соберите команду — дизайнера, верстальщика и маркетолога, устройте брейншторм, зафиксируйте результаты, распределите их по колонкам («Бэклог»), оцените важность каждого пункта посредством меток или специально выделенных зон, утвердите дедлайны для приоритетных элементов и поручите выполнение работ ответственным участникам команды.",
-        "point": "PR",
+        "description": "Запустите процесс организации доски, соберите команду — дизайнера, верстальщика и маркетолога, устройте брейншторм, зафиксируйте результаты, распределите их по колонкам («Бэклог»), оцените важность каждого пункта меток или специально зон, утвердите дедлайны для приоритетных элементов",
+        "topic": "PR",
         "image": {
             "imgAttr": {
-                "src": image("cases/case_1_desktop.svg"),
+                "src": image("cases/case_desktop.png"),
             },
             "sources": [
                 {
-                    "srcSet": image("cases/case_1_mobile.svg"),
+                    "srcSet": image("cases/case_mobile.png"),
                     "media": "(max-width: 1440px)",
                 },
             ],
@@ -516,13 +551,23 @@ export const feedbackAssets = {
         },
         "button": {
             "text": "отправить",
-            "arrow": image("arrows/white_arrow.svg"),
+            "arrow": {
+            "imgAttr": {
+                "src": image("arrows/white_arrow.svg"),
+            },
+            "sources": [
+                {
+                    "srcSet": image("arrows/white_arrow_mobile.svg"),
+                    "media": "(max-width: 1440px)",
+                },
+            ],
+        },
             "tag": "button",
             "type": "sumbit"  
         },
     },
     "cat": {
-        "image": {
+        "body": {
             "imgAttr": {
                 "src": image("feedback/cat_desktop.svg"),
             },
@@ -532,6 +577,16 @@ export const feedbackAssets = {
                     "media": "(max-width: 1440px)",
                 },
             ],
+        },
+        "leftEye": {
+            "imgAttr": {
+                "src": image("feedback/left_eye.svg"),
+            },
+        },
+        "rightEye": {
+            "imgAttr": {
+                "src": image("feedback/right_eye.svg"),
+            },
         },
     }
 }
