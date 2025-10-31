@@ -1,0 +1,15 @@
+@use "./variables.scss";
+
+@mixin DESKTOP() {
+  @media screen and (min-width: #{variables.$NotMobile + 1}px) {
+    @content;
+  }
+}
+
+@mixin MOBILE() {
+  @media screen and (max-width: #{variables.$NotMobile}px) {
+    @content;
+  }
+}
+
+

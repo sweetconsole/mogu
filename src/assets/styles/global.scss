@@ -1,12 +1,14 @@
 @use "./variables.scss";
+@use "./functions.scss";
+@use "./mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    color: red;
-    font-size: 32px;
+  font-family: 'Times New Roman', serif;
+  color: red;
+  font-size: 32px;
 }
 
 a, button {
-    cursor: pointer;
+  cursor: pointer;
 }

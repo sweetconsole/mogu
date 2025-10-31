@@ -1,7 +1,10 @@
+@use "../../../../assets/styles/variables.scss";
+@use "../../../../assets/styles/mixins.scss";
+
 
 .link {
-    width: 64px;
-    height: 64px;
+    @include mixins.resizeDesktop(width, 64);
+    @include mixins.resizeDesktop(height, 64);
     position: absolute;
     top: 100%;
     left: 0;
@@ -11,10 +14,10 @@
     transition: all .1s ease-in-out;
 
     &:active {
-        padding-bottom: 30px;
+        @include mixins.resizeDesktop(padding-bottom, 30);
     }
 
-    @media (max-width: 1440px) {
+    @media (max-width: #{variables.$NotMobile}px) {
         display: none;
     }
 }

@@ -1,25 +1,20 @@
 @use "../../../../assets/styles/variables.scss";
+@use "../../../../assets/styles/mixins.scss";
 
 @mixin message {
-    height: 64px;
-    padding: 0 24px;
+    @include mixins.resize(height, 64, 40);
+    @include mixins.resize(padding-left, 24, 16);
+    @include mixins.resize(padding-right, 24, 16);
+    @include mixins.resize(border-radius, 16, 12);
+    @include mixins.resize(font-size, 22, 12);
     position: absolute;
-    font-size: 22px;
     font-family: variables.$font-family-primary;
     font-weight: variables.$font-weight-medium;
     background-color: white;
-    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-
-    @media (max-width: 1440px) {
-        height: 40px;
-        padding: 0 16px;
-        border-radius: 12px;
-        font-size: 12px;
-    }
 }
 
 .block {
@@ -28,57 +23,43 @@
 
 .footnote {
     @include message();
-    left: 20px;
-    bottom: -90px;
-
-    @media (max-width: 1440px) {
-        bottom: -29px;
-        left: 15px;
-    }
+    @include mixins.resize(left, 20, 25);
+    @include mixins.resize(bottom, -90, -55);
 }
 
 .cursor {
-    width: 32px;
-    height: 32px;
-    top: -60px;
-    left: 15px;
+    @include mixins.resize(width, 32, 20);
+    @include mixins.resize(height, 32, 20);
+    @include mixins.resize(top, -60, -38);
+    @include mixins.resize(left, 15, -5);
     position: absolute;
-
-    @media (max-width: 1440px) {
-        width: 20px;
-        height: 20px;
-        top:  -38px;
-        left: 5px;
-    }
 }
 
 .bubble {
     @include message();
     left: -120%;
-    top: -90px;
+
+    @include mixins.resize(top, -90, -55);
+    @include mixins.resize(left, -120, -60);
 
     &::after {
-        width: 20px;
-        height: 20px;
+        @include mixins.resize(width, 20, 12);
+        @include mixins.resize(height, 20, 12);
+        @include mixins.resize(bottom, -9, -5);
         background-color: white;
         content: "";
         z-index: 0;
         display: block;
         position: absolute;
-        bottom: -9px;
         border-radius: 0 0 5px 0;
         transform: rotate(45deg);
     }
 
-    @media (max-width: 1440px) {
+    @media (max-width: #{variables.$NotMobile}px) {
         left: -60%;
-        top: -55px;
 
         &::after {
-            width: 12px;
-            height: 12px;
             border-radius: 0 0 3px 0;
-            bottom: -5px;
         }
     }
 }

@@ -19,6 +19,9 @@ const Header = () => {
 		}
   }
 
+  console.log("styles.logo",styles.logo);
+  
+
   return (
     <header className={styles.header}>
       <Menu viewMenu={viewMenu} changeViewMenu={changeViewMenu} />

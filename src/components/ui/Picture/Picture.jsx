@@ -6,7 +6,7 @@ const Picture = ({ sources, imgAttr }) => {
         <source {...source} key={key} />
       ))}
 
-      <img {...imgAttr} alt={imgAttr?.alt ? imgAttr.alt : "Lorem impus"} />
+      <img style={{width: "100%", height: "100%"}} {...imgAttr} alt={imgAttr?.alt ? imgAttr.alt : "Lorem impus"} />
     </picture>
   )
 }

@@ -1,24 +1,22 @@
-@use "../../../assets//styles/variables.scss";
+@use "../../../assets/styles/variables.scss";
+@use "../../../assets/styles/mixins.scss";
+@use "../../../assets/styles/adaptive.scss";
 
 .section {
+  @include mixins.resize(padding-top, 64, 40);
   background-color: white;
   border-radius: 20px;
   margin-top: -50px;
-  padding-top: 64px;
-
-  @media (max-width: 1440px) {
-    padding-top: 40px;
-  }
 }
 
 .grid {
+  @include mixins.resize(gap, 24, 10);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 826px 884px 530px;
   grid-template-areas: "block_1 block_1 block_1 block_2 block_2 block_2"
                        "block_3 block_3 block_3 block_3 block_3 block_3"
                        "block_4 block_4 block_5 block_5 block_6 block_6";
-  gap: 24px;
 
   @media (max-width: 1440px) {
     grid-template-columns: 335px;
@@ -29,13 +27,12 @@
                          "block_4"
                          "block_5"
                          "block_6";
-    gap: 10px;
   }
 }
 
 .block {
-  border-radius: 30px;
-  padding: 24px;
+  @include mixins.resize(border-radius, 30, 20);
+  @include mixins.resize(padding, 24, 0);
   text-align: center;
   display: flex;
   justify-content: flex-start;
@@ -99,9 +96,6 @@
   }
 
   @media (max-width: 1440px) {
-    padding: 0;
-    border-radius: 20px;
-
     &:nth-child(1) {
       padding-top: 25px;
 
@@ -167,49 +161,37 @@
 }
 
 .title {
+  @include mixins.resize(max-width, 596, 275);
+  @include mixins.resize(font-size, 78, 36);
+  @include mixins.resize(line-height, 80, 40);
+  @include mixins.resize(margin-bottom, 20, 15);
+  @include mixins.resize(letter-spacing, -4, -1);
   font-family: variables.$font-family-secondary;
   font-weight: variables.$font-weight-regular;
-  font-size: 78px;
-  line-height: 80px;
-  letter-spacing: -4px;
-  margin-bottom: 20px;
-
-  @media (max-width: 1440px) {
-    max-width: 275px;
-    font-size: 36px;
-    line-height: 40px;
-    letter-spacing: -1px;
-    margin-bottom: 15px;
-  }
 }
 
 .description {
+  @include mixins.resize(font-size, 44, 20);
+  @include mixins.resize(line-height, 52, 22);
   max-width: 865px;
   font-family: variables.$font-family-primary;
   font-weight: variables.$font-weight-regular;
-  font-size: 44px;
-  line-height: 52px;
   letter-spacing: -0.1px;
-
-  @media (max-width: 1440px) {
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: -0.1px;
-  }
 }
 
 .points {
+  @include mixins.resize(gap, 24, 10);
+  @include mixins.resize(display, 24, 10);
+  @include mixins.resize(gap, 24, 10);
   max-width: 1072px;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 38px 1fr 38px 1fr;
-  gap: 24px;
   list-style: none;
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     display: flex;
     flex-direction: column;
-    gap: 10px;
   }
 }
 
@@ -218,16 +200,14 @@
 }
 
 .text {
+  @include mixins.resize(font-size, 44, 20);
+  @include mixins.resize(line-height, 52, 22);
   font-family: variables.$font-family-primary;
   font-weight: variables.$font-weight-regular;
-  font-size: 44px;
-  line-height: 52px;
   letter-spacing: -0.1px;
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     max-width: 223px;
-    font-size: 20px;
-    line-height: 22px;
   }
 }
 
@@ -236,7 +216,7 @@
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     width: 27px;
     height: 22px;
     transform: rotate(90deg);

@@ -13,7 +13,7 @@ export const headerAssets = {
             "sources": [
                 {
                     "srcSet": image("header/logo_mobile.svg"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -69,7 +69,7 @@ export const introAssets = {
                 "sources": [
                     {
                         "srcSet": image("arrows/aqua_arrow_mobile.svg"),
-                        "media": "(max-width: 1440px)",
+                        "media": "(max-width: 1023px)",
                     },
                 ],
             },
@@ -89,7 +89,7 @@ export const introAssets = {
                     "sources": [
                         {
                             "srcSet": image("intro/avatars/1_mobile.png"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },
@@ -105,7 +105,7 @@ export const introAssets = {
                         "sources": [
                             {
                                 "srcSet": image("intro/cursor_mobile.svg"),
-                                "media": "(max-width: 1440px)",
+                                "media": "(max-width: 1023px)",
                             },
                         ],
                     },
@@ -120,7 +120,7 @@ export const introAssets = {
                     "sources": [
                         {
                             "srcSet": image("intro/avatars/2_mobile.png"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },
@@ -135,7 +135,7 @@ export const introAssets = {
                     "sources": [
                         {
                             "srcSet": image("intro/avatars/3_mobile.png"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },           
@@ -155,7 +155,7 @@ export const introAssets = {
                     "sources": [
                         {
                             "srcSet": image("intro/avatars/4_mobile.png"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },
@@ -169,7 +169,7 @@ export const introAssets = {
                     "sources": [
                         {
                             "srcSet": image("intro/avatars/plus_mobile.png"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },
@@ -182,7 +182,7 @@ export const introAssets = {
             "sources": [
                 {
                     "srcSet": image("intro/pen_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -195,7 +195,7 @@ export const introAssets = {
             "sources": [
                 {
                     "srcSet": image("intro/pen_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -219,7 +219,7 @@ export const charsAssets = {
                 "sources": [
                     {
                         "srcSet": image("people/people_1_mobile.svg"),
-                        "media": "(max-width: 1440px)",
+                        "media": "(max-width: 1023px)",
                     },
                 ],
             },
@@ -232,7 +232,7 @@ export const charsAssets = {
                 "sources": [
                     {
                         "srcSet": image("people/people_2_mobile.svg"),
-                        "media": "(max-width: 1440px)",
+                        "media": "(max-width: 1023px)",
                     },
                 ],
             },
@@ -245,7 +245,7 @@ export const charsAssets = {
                 "sources": [
                     {
                         "srcSet": image("people/people_3_mobile.svg"),
-                        "media": "(max-width: 1440px)",
+                        "media": "(max-width: 1023px)",
                     },
                 ],
             },
@@ -258,7 +258,7 @@ export const charsAssets = {
                 "sources": [
                     {
                         "srcSet": image("people/people_4_mobile.svg"),
-                        "media": "(max-width: 1440px)",
+                        "media": "(max-width: 1023px)",
                     },
                 ],
             },
@@ -271,7 +271,7 @@ export const charsAssets = {
                 "sources": [
                     {
                         "srcSet": image("people/people_5_mobile.svg"),
-                        "media": "(max-width: 1440px)",
+                        "media": "(max-width: 1023px)",
                     },
                 ],
             },
@@ -317,7 +317,7 @@ export const aboutAssets = [
             "sources": [
                 {
                     "srcSet": image("about/about_1_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -336,7 +336,7 @@ export const aboutAssets = [
             "sources": [
                 {
                     "srcSet": image("about/about_2_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -356,7 +356,7 @@ export const aboutAssets = [
             "sources": [
                 {
                     "srcSet": image("about/about_3_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -377,7 +377,7 @@ export const aboutAssets = [
                     "sources": [
                         {
                             "srcSet": image("arrows/white_arrow_mobile.svg"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },
@@ -395,7 +395,7 @@ export const aboutAssets = [
                     "sources": [
                         {
                             "srcSet": image("arrows/white_arrow_mobile.svg"),
-                            "media": "(max-width: 1440px)",
+                            "media": "(max-width: 1023px)",
                         },
                     ],
                 },
@@ -421,7 +421,7 @@ export const aboutAssets = [
             "sources": [
                 {
                     "srcSet": image("about/about_5_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -447,7 +447,7 @@ export const separatorAsset = {
     "sources": [
         {
             "srcSet": image("separator/separator_mobile.png"),
-            "media": "(max-width: 1440px)",
+            "media": "(max-width: 1023px)",
         },
     ],
 }
@@ -464,7 +464,7 @@ export const casesAssets = [
             "sources": [
                 {
                     "srcSet": image("cases/case_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -480,7 +480,7 @@ export const casesAssets = [
             "sources": [
                 {
                     "srcSet": image("cases/case_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         }
@@ -496,7 +496,7 @@ export const casesAssets = [
             "sources": [
                 {
                     "srcSet": image("cases/case_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         }
@@ -512,7 +512,7 @@ export const casesAssets = [
             "sources": [
                 {
                     "srcSet": image("cases/case_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -529,7 +529,7 @@ export const casesAssets = [
             "sources": [
                 {
                     "srcSet": image("cases/case_mobile.png"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -558,7 +558,7 @@ export const feedbackAssets = {
             "sources": [
                 {
                     "srcSet": image("arrows/white_arrow_mobile.svg"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },
@@ -574,7 +574,7 @@ export const feedbackAssets = {
             "sources": [
                 {
                     "srcSet": image("feedback/cat_mobile.svg"),
-                    "media": "(max-width: 1440px)",
+                    "media": "(max-width: 1023px)",
                 },
             ],
         },

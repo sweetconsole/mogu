@@ -1,6 +1,7 @@
 import { feedbackAssets } from "../../../constants/copyright"
 import Container from "../../ui/Container/Container"
 import Picture from "../../ui/Picture/Picture"
+import Cat from "./Cat"
 import styles from "./Feedback.module.scss"
 
 const Feedback = () => {
@@ -22,16 +23,7 @@ const Feedback = () => {
         </form>
       </Container>
 
-      <div className={styles.cat}>
-        <Picture 
-          imgAttr={feedbackAssets.cat.body.imgAttr}
-          sources={feedbackAssets.cat.body.sources}
-        />
-
-        <Picture imgAttr={feedbackAssets.cat.leftEye.imgAttr} />
-
-        <Picture imgAttr={feedbackAssets.cat.rightEye.imgAttr} />
-      </div>
+      <Cat />
     </section>
   )
 }

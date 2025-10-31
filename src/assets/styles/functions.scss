@@ -1,0 +1,17 @@
+@use "./variables.scss";
+
+@function toVWDesktop($value) {
+  @return 100vw * ($value / variables.$widthTemplateDesktop);
+}
+
+@function toVHDesktop($value) {
+  @return 100vh * ($value / variables.$heightTemplateDesktop);
+}
+
+@function toVWMobile($value) {
+  @return 100vw * ($value / variables.$heightTemplateDesktop);
+}
+
+@function toVHMobile($value) {
+  @return 100vh * ($value / variables.$heightTemplateMobile);
+}

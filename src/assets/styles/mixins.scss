@@ -1,0 +1,32 @@
+@use "./variables.scss";
+@use "./functions.scss";
+@use "./adaptive.scss";
+
+@mixin resizeDesktop($property, $template) {
+  @include adaptive.DESKTOP() {
+    :global(.landscape-desktop) &{
+      #{$property}: functions.toVHDesktop($template);
+    }
+ 
+    :global(.portrait-desktop) &{
+      #{$property}: functions.toVWDesktop($template);
+    }     
+  }
+}
+
+@mixin resizeMobile($property, $template) {
+  @include adaptive.MOBILE() {
+    :global(.landscape-mobile) &{
+       #{$property}: functions.toVHMobile($template);
+    }
+
+    :global(.portrait-mobile) &{
+       #{$property}: functions.toVWMobile($template);
+    }
+  }
+}
+
+@mixin resize($property, $desktop, $mobile) {
+  @include resizeDesktop($property, $desktop);
+  @include resizeMobile($property, $mobile);
+}

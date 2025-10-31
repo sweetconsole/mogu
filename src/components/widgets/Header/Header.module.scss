@@ -1,18 +1,16 @@
 @use "../../../assets/styles/variables.scss";
+@use "../../../assets/styles/mixins.scss";
 
 .header {
     background-color: white;
     position: sticky;
     top: 0;
-    height: 80px;
-    padding: 8px 0;
     z-index: 25;
     font-family: variables.$font-family-primary;
     font-weight: variables.$font-weight-medium;
-
-    @media (max-width: 1440px) {
-        padding: 13px 0;
-    }
+    @include mixins.resizeDesktop(height, 80);
+    @include mixins.resize(padding-top, 8, 13);
+    @include mixins.resize(padding-bottom, 8, 13);
 }
 
 .inner {
@@ -23,31 +21,27 @@
 
 .block {
     display: flex;
-    gap: 24px;
 }
 
 .logo {
-    width: 160px;
-    height: 64px;
-
-    @media (max-width: 1440px) {
-        width: 130px;
-        height: 53px;
-    }
+    display: block;
+    @include mixins.resize(width, 160, 130);
+    @include mixins.resize(height, 64, 53);
 }
 
 .navigation {
     display: flex;
     align-items: center;
 
-    @media (max-width: 1440px) {
+    @media (max-width: #{variables.$NotMobile}px) {
         display: none;
     }
 }
 
 .link {
-    padding: 0 16px;
-    font-size: 16px;
+    @include mixins.resizeDesktop(padding-left, 16);
+    @include mixins.resizeDesktop(padding-right, 16);
+    @include mixins.resizeDesktop(font-size, 16);
     letter-spacing: 0.1px;
     color: #5B605C;
     transition: all 0.2s ease-in-out;
@@ -58,15 +52,15 @@
 }
 
 .button {
+    @include mixins.resizeDesktop(font-size, 22);
+    @include mixins.resizeDesktop(line-height, 48);
+    @include mixins.resizeDesktop(padding-left, 32);
+    @include mixins.resizeDesktop(padding-right, 32);
+    @include mixins.resizeDesktop(border-radius, 30);
     background-color: black;
     color: white;
-    font-size: 22px;
-    line-height: 48px;
     letter-spacing: -0.1px;
-    padding: 0 32px;
-    border-radius: 30px;
     border: 3px solid black;
-
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -74,20 +68,20 @@
         background-color: transparent;
     }
 
-    @media (max-width: 1440px) {
+    @media (max-width: #{variables.$NotMobile}px) {
         display: none;
     }
 }
 
 @mixin button_menu {
-    width: 39px;
-    height: 39px;
+    @include mixins.resizeMobile(width, 39);
+    @include mixins.resizeMobile(height, 39);
+    @include mixins.resizeMobile(gap, 8);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 50;
-    gap: 8px;
     padding: 0;
     border: none;
     background-color: transparent; 
@@ -100,7 +94,7 @@
         transition: all .2s ease-in-out;
     }
 
-     @media (max-width: 1440px) {
+     @media (max-width: #{variables.$NotMobile}px) {
         display: flex;
     }
 }

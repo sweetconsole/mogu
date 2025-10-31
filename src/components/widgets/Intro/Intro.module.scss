@@ -1,12 +1,12 @@
 @use "../../../assets/styles/variables.scss";
+@use "../../../assets/styles/mixins.scss";
 
 .section {
-    display: grid;
-    grid-template-columns: 640px 644px;
+    display: flex;
     justify-content: space-between;
     position: relative;
 
-    @media (max-width: 1440px) {
+    @media (max-width: #{variables.$NotMobile}px) {
         display: block;
     }
 }

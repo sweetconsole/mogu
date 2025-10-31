@@ -1,63 +1,52 @@
 @use "../../../../assets/styles/variables.scss";
+@use "../../../../assets/styles/mixins.scss";
+
 
 .block {
-    padding: 24px 24px 56px 24px;
+    @include mixins.resize(padding-top, 24, 0);
+    @include mixins.resize(padding-right, 24, 0);
+    @include mixins.resize(padding-bottom, 56, 0);
+    @include mixins.resize(padding-left, 24, 0);
+    @include mixins.resizeDesktop(width, 640);
+    @include mixins.resizeMobile(margin-bottom, 31);
     color: #222FDC;
-
-    @media (max-width: 1440px) {
-        padding: 0;
-        margin-bottom: 31px;
-    }
 }
 
 .title {
+    @include mixins.resize(font-size, 90, 44);
+    @include mixins.resize(line-height, 80, 50);
+    @include mixins.resize(margin-bottom, 24, 20);
     font-family: variables.$font-family-secondary;
     font-weight: variables.$font-weight-medium;
-    font-size: 90px;
-    line-height: 80px;
     letter-spacing: -2px;
     white-space: pre-wrap;
-    margin-bottom: 24px;
-
-    @media (max-width: 1440px) {
-        font-size: 44px;
-        line-height: 50px;
-        margin-bottom: 20px;
-    }
 }
 
 .description {
+    @include mixins.resize(font-size, 22, 16);
+    @include mixins.resize(line-height, 36, 20);
+    @include mixins.resize(margin-bottom, 64, 20);
     font-family: variables.$font-family-primary;
     font-weight: variables.$font-weight-regular;
-    font-size: 22px;
-    line-height: 36px;
     letter-spacing: -0.2px;
-    margin-bottom: 64px;
-
-    @media (max-width: 1440px) {
-        font-size: 16px;
-        line-height: 20px;
-        margin-bottom: 20px;
-    }
 }
 
 .features {
+    @include mixins.resize(gap, 12, 13);
+    @include mixins.resize(margin-bottom, 12, 13);
     display: flex;
-    gap: 12px;
     list-style: none;
-    margin-bottom: 12px;
 
-    @media (max-width: 1440px) {
-        column-gap: 14px;
-        row-gap: 12px;
+    @media (max-width: #{variables.$NotMobile}px) {
         flex-wrap: wrap;
-        margin-bottom: 13px;
     }
 }
 
 .feature {
-    padding: 0 16px;
-    height: 48px;
+    @include mixins.resize(padding-left, 16, 9);
+    @include mixins.resize(padding-right, 16, 9);
+    @include mixins.resize(height, 48, 41);
+    @include mixins.resize(font-size, 16, 14);
     background-color: #F7F7F7;
     border-radius: 12px;
     display: flex;
@@ -65,80 +54,60 @@
     justify-content: center;
     font-family: variables.$font-family-primary;
     font-weight: variables.$font-weight-regular;
-    font-size: 16px;
     letter-spacing: 0.1px;
     white-space: nowrap;
-
-    @media (max-width: 1440px) {
-        padding: 0 9px;
-        height: 41px;
-        font-size: 14px;   
-    }
 }
 
 .field {
+    @include mixins.resize(height, 100, 70);
+    @include mixins.resize(border-radius, 30, 20);
+    @include mixins.resizeDesktop(width, 596);
     width: 596px;
-    height: 100px;
     border: 2px solid #222FDC;
-    border-radius: 30px;
     position: relative;
 
     @media (max-width: 1440px) {
         width: 100%;
-        height: 70px;
-        border-radius: 20px;
     }
 }
 
 .input {
+    @include mixins.resize(height, 95, 66);
+    @include mixins.resize(font-size, 28, 18);
+    @include mixins.resize(padding-left, 24, 16);
     width: 65%;
-    height: 96px;
     border: none;
     border-radius: 30px;
     background-color: white;
     outline: none;
-    padding-left: 24px;
     position: absolute;
     top: 0;
     left: 0;
     font-family: variables.$font-family-primary;
     font-weight: variables.$font-weight-regular;
-    font-size: 28px;
     color: black;
 
     &::placeholder {
         color: #B0B1C1;
     }
-
-    @media (max-width: 1440px) {
-        height: 66px;
-        font-size: 18px;
-        padding-left: 16px;
-    }
 }
 
 .button {
-    padding: 0 32px;
+    @include mixins.resize(height, 100, 70);
+    @include mixins.resize(border-radius, 30, 20);
+    @include mixins.resize(font-size, 28, 18);
+    @include mixins.resize(padding-left, 32, 15);
+    @include mixins.resize(padding-right, 32, 15);
+    @include mixins.resize(top, -2, -2);
+    @include mixins.resize(right, -2, -2);
+    @include mixins.resize(gap, 12, 12);
     display: flex;
     align-items: center;
     font-family: variables.$font-family-primary;
     font-weight: variables.$font-weight-medium;
-    font-size: 28px;
     color: white;
     background-color: #222FDC;
-    height: 100px;
     border: none;
-    border-radius: 30px;
     letter-spacing: -0.1px;
-    gap: 12px;
     position: absolute;
-    top: -2px;
-    right: -2px;
-
-    @media (max-width: 1440px) {
-        padding: 0 15px;
-        height: 70px;
-        border-radius: 20px;
-        font-size: 18px;
-    }
 }
