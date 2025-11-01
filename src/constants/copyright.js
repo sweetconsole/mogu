@@ -578,15 +578,5 @@ export const feedbackAssets = {
                 },
             ],
         },
-        "leftEye": {
-            "imgAttr": {
-                "src": image("feedback/left_eye.svg"),
-            },
-        },
-        "rightEye": {
-            "imgAttr": {
-                "src": image("feedback/right_eye.svg"),
-            },
-        },
     }
 }

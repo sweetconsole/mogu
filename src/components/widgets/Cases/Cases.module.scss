@@ -1,84 +1,68 @@
-@use "../../../assets//styles/variables.scss";
+@use "../../../assets/styles/variables.scss";
+@use "../../../assets/styles/mixins.scss";
+@use "../../../assets/styles/adaptive.scss";
 
 .section {
+  @include mixins.resize(padding-top, 64, 30);
+  @include mixins.resize(padding-bottom, 150, 84);
   background-color: #DAD4C5;
   border-radius: 20px;
   margin-top: -50px;
-  padding-top: 64px;
-  padding-bottom: 150px;
-
-  @media (max-width: 1440px) {
-    padding-top: 30px;
-    padding-bottom: 84px;  
-  }
 }
 
 .block {
-  height: 720px;
+  @include mixins.resize(height, 720, 746);
+  @include mixins.resize(padding, 8, 5);
+  @include mixins.resize(border-radius, 30, 20);
   display: flex;
   justify-content: space-between;
   background-color: #CCC7B9;
-  border-radius: 30px;
-  padding: 8px;
   position: relative;
 
-  @media (max-width: 1440px) {
-    padding: 5px;
+  @include adaptive.MOBILE {
     flex-direction: column;
-    border-radius: 20px;
     gap: 25px;
   }
 }
 
 .info {
-  max-width: 445px;
+  @include mixins.resize(padding-top, 16, 7);
+  @include mixins.resize(padding-right, 24, 7);
+  @include mixins.resize(padding-bottom, 24, 0);
+  @include mixins.resize(padding-left, 16, 7);
+  @include mixins.resize(max-width, 445, 320);
   font-family: variables.$font-family-primary;
-  padding: 16px 24px 24px 16px;
   position: relative;
-
-  @media (max-width: 1440px) {
-    padding: 7px 15px 0px 7px;
-  }
 }
 
 .topics {
+  @include mixins.resize(margin-bottom, 32, 25);
+  @include mixins.resize(gap, 12, 14);
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
   list-style: none;
-  margin-bottom: 32px;
-
-  @media (max-width: 1440px) {
-    margin-bottom: 25px;
-  }
 }
 
 .topic,
-.topic_actived,
+.topic_active,
 .topic_disabled {
-  padding: 0 16px;
+  @include mixins.resize(padding-left, 16, 10);
+  @include mixins.resize(padding-right, 16, 10);
+  @include mixins.resize(font-size, 16, 14);
+  @include mixins.resize(line-height, 48, 41);
+  @include mixins.resize(gap, 12, 14);
   display: flex;
   align-items: center;
   border-radius: 12px;
   background-color: #FFFFFF;
   color: #5B605C;
   font-weight: variables.$font-weight-medium;
-  font-size: 16px;
-  line-height: 48px;
   letter-spacing: 0.1px;
   cursor: pointer;
   user-select: none;
-
-  @media (max-width: 1440px) {
-    padding: 0 10px;
-    column-gap: 14px;
-    row-gap: 13px;
-    font-size: 14px;
-    line-height: 41px;
-  }
 } 
 
-.topic_actived {
+.topic_active {
   background-color: #F7FF8F;
   color: black
 }
@@ -90,32 +74,26 @@
 }
 
 .title_block {
-  height: 48px;
-  margin-bottom: 8px;
+  @include mixins.resize(margin-bottom, 8, 3);
+  @include mixins.resize(height, 48, 48);
+  @include mixins.resize(line-height, 48, 48);
   position: relative;
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     font-size: 24px;
-    line-height: 48px;
-    margin-bottom: 3px;
   }
 }
 
 .title,
 .title_selected {
+  @include mixins.resize(font-size, 32, 24);
+  @include mixins.resize(line-height, 48, 48);
   font-weight: variables.$font-weight-medium;
-  font-size: 32px;
-  line-height: 48px;
   letter-spacing: -0.1px;
   color: black;
   position: absolute;
   white-space: nowrap;
   transition: all 0.5s linear;
-
-  @media (max-width: 1440px) {
-    font-size: 24px;
-    line-height: 48px; 
-  }
 }
 
 .title {
@@ -123,31 +101,22 @@
 }
 
 .title_selected {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .description_block {
-  height: 325px;
+  @include mixins.resize(height, 325, 270);
   position: relative;
-
-  @media (max-width: 1440px) {
-    height: 270px;
-  }
 }
 
 .description,
 .description_selected {
-  font-size: 22px;
-  line-height: 36px;
+  @include mixins.resize(font-size, 22, 16);
+  @include mixins.resize(line-height, 36, 30);
   letter-spacing: -0.2px;
   color: #5B605C;
   position: absolute;
   transition: all 0.5s linear;
-
-  @media (max-width: 1440px) {
-    font-size: 16px;
-    line-height: 30px;
-  }
 }
 
 .description {
@@ -160,25 +129,19 @@
 
 .image,
 .image_selected {
-  width: 859px;
-  height: 704px;
+  @include mixins.resize(width, 859, 325);
+  @include mixins.resize(height, 704, 260);
   position: absolute;
   right: 8px;
   transition: all 0.5s linear;
 
   img {
-    border-radius: 25px;
+    @include mixins.resize(border-radius, 25, 15);
   }
 
-  @media (max-width: 1440px) {
-    width: 325px;
-    height: 260px;
+  @include adaptive.MOBILE {
     bottom: 5px;
     left: 5px;
-
-    img {
-      border-radius: 15px;
-    }
   }
 }
 

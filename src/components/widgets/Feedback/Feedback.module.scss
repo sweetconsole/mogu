@@ -105,6 +105,8 @@
 }
 
 .cat {
+  @include mixins.resize(width, 449, 243);
+  @include mixins.resize(height, 454, 253);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -112,11 +114,11 @@
 
   &::after,
   &::before {
-    width: 200px;
-    height: 150px;
+    @include mixins.resize(width, 200, 90);
+    @include mixins.resize(height, 150, 60);
+    @include mixins.resize(top, 110, 55);
+    @include mixins.resize(left, 93, 47);
     position: absolute;
-    top: 110px;
-    left: 93px;
     display: block;
     content: "";
     background-color: black;
@@ -130,16 +132,6 @@
   &:active {
     &::before {
       opacity: 1;
-    }
-  }
-
-  @media (max-width: 1440px) {
-    &::after,
-    &::before{
-      width: 90px;
-      height: 60px;
-      top: 55px;
-      left: 47px;
     }
   }
 }
@@ -160,4 +152,32 @@
   to {
     opacity: 0;
   }
+}
+
+.leftEye,
+.rightEye {
+  @include mixins.resize(width, 80, 39);
+  @include mixins.resize(height, 80, 39);
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftEye {
+  @include mixins.resize(top, 106, 39);
+  @include mixins.resize(left, 93, 39);
+}
+
+.rightEye {
+  @include mixins.resize(top, 151, 39);
+  @include mixins.resize(left, 189, 39);
+}
+
+.pupil {
+  @include mixins.resize(width, 43, 22);
+  @include mixins.resize(height, 43, 22);
+  border-radius: 100%;
+  background-color: black;
 }

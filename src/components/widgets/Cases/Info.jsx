@@ -2,9 +2,9 @@ import { casesAssets } from "../../../constants/copyright"
 import styles from "./Cases.module.scss"
 
 const Info = ({selectedCase, setSelectedCase}) => {
-  const getStylesToopic = (topicId, disabled) => {
+  const getStylesTopic = (topicId, disabled) => {
     if (topicId === selectedCase) {
-      return styles.topic_actived
+      return styles.topic_active
     } else if (disabled) {
       return styles.topic_disabled
     } else {
@@ -17,7 +17,7 @@ const Info = ({selectedCase, setSelectedCase}) => {
       <ul className={styles.topics}>
         {casesAssets.map((project, key) => (
           <li 
-            className={getStylesToopic(key, project.disabled)} 
+            className={getStylesTopic(key, project.disabled)}
             onClick={!project.disabled ? () => setSelectedCase(key) : null}
             key={key}
           >

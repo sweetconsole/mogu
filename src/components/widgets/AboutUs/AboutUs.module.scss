@@ -18,7 +18,7 @@
                        "block_3 block_3 block_3 block_3 block_3 block_3"
                        "block_4 block_4 block_5 block_5 block_6 block_6";
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     grid-template-columns: 335px;
     grid-template-rows: 391px 391px 649px 208px 208px 208px;
     grid-template-areas: "block_1"

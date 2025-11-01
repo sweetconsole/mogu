@@ -1,66 +1,147 @@
 @use "../../../assets/styles/variables.scss";
+@use "../../../assets/styles/mixins.scss";
+@use "../../../assets/styles/adaptive.scss";
 
 .section {
-  height: 1050px;
+  @include mixins.resize(height, 1050, 1040);
+  @include mixins.resize(padding-top, 200, 40);
   background-color: #2B2B2B;
   border-radius: 20px;
   margin-top: 127px;
-  padding-top: 200px;
-
-  @media (max-width: 1440px) {
-    padding-top: 40px;
-  }
 }
 
 .block {
-  width: 100%;
-  height: 525px;
+  @include mixins.resize(width, 1312, 292);
+  @include mixins.resize(height, 525, 906);
   position: relative;
 }
 
 .people_1 {
+  @include mixins.resize(top, 0, 0);
+  @include mixins.resize(left, 17, 0);
   position: absolute;
-  top: 0;
-  left: 17px;
   z-index: 2;
+
+  picture {
+    @include mixins.resize(widht, 319.86, 181.54);
+    @include mixins.resize(height, 262.74, 149.12);
+  }
 }
 
 .people_2 {
+  @include mixins.resize(top, 190.17, 107.93);
+  @include mixins.resize(left, 182.01, 104.66);
   position: absolute;
-  bottom: 109px;
-  left: 182px;
   z-index: 2;
+
+  picture {
+    @include mixins.resize(widht, 291.97, 165.71);
+    @include mixins.resize(height, 225.22, 127.83);
+  }
 }
 
 .people_3 {
+  @include mixins.resize(bottom, 115.09, 476.78);
+  @include mixins.resize(left, 457, 23);
   position: absolute;
-  bottom: 115px;
-  left: 457px;
   z-index: 1;
+
+  picture {
+    @include mixins.resize(widht, 320.5, 182.97);
+    @include mixins.resize(height, 324.44, 185.22);
+  }
 }
 
 .people_4 {
+  @include mixins.resize(top, 28.28, 432);
+  @include mixins.resize(right, 334.4, 64.96);
   position: absolute;
-  top: 30px;
-  right: 333px;
   z-index: 2;
+
+  picture {
+    @include mixins.resize(widht, 200.6, 114.52);
+    @include mixins.resize(height, 336, 191.82);
+  }
 }
 
 .people_5 {
+  @include mixins.resize(bottom, 115, 15);
+  @include mixins.resize(right, 134, 113);
   position: absolute;
-  bottom: 114px;
-  right: 136px;
   z-index: 1;
+
+  picture {
+    @include mixins.resize(widht, 280.74, 169.27);
+    @include mixins.resize(height, 286.87, 172.97);
+  }
 }
 
+
+// DESKTOP
 .chars {
+  @include mixins.resize(width, 1090, 0);
+  @include mixins.resize(height, 333, 0);
+  @include mixins.resize(bottom, 18, 0);
+  @include mixins.resize(left, 111, 0);
   position: absolute;
-  bottom: 17px;
-  left: 111px;
   z-index: 1;
+
+  @include adaptive.MOBILE {
+    display: none;
+  }
 }
 
 .shadows {
+  @include mixins.resize(width, 1312, 0);
+  @include mixins.resize(height, 153, 0);
   position: absolute;
   bottom: 0;
+
+  @include adaptive.MOBILE {
+    display: none;
+  }
+}
+
+
+// MOBILE
+.char_m,
+.char_o,
+.char_g,
+.char_u {
+  display: none;
+  position: absolute;
+
+  @include adaptive.MOBILE {
+    display: block;
+  }
+}
+
+.char_m {
+  @include mixins.resize(width, 0, 292);
+  @include mixins.resize(height, 0, 146.87);
+  @include mixins.resize(left, 0, 0);
+  @include mixins.resize(top, 0, 99.14);
+}
+
+.char_o {
+  @include mixins.resize(width, 0, 190);
+  @include mixins.resize(height, 0, 146.07);
+  @include mixins.resize(left, 0, 50);
+  @include mixins.resize(top, 0, 303.93);
+  z-index: 1;
+}
+
+.char_g {
+  @include mixins.resize(width, 0, 160);
+  @include mixins.resize(height, 0, 205.55);
+  @include mixins.resize(left, 0, 66);
+  @include mixins.resize(bottom, 0, 185);
+}
+
+.char_u {
+  @include mixins.resize(width, 0, 159.48);
+  @include mixins.resize(height, 0, 154.52);
+  @include mixins.resize(left, 0, 60.63);
+  bottom: 0;
+  z-index: 1;
 }
