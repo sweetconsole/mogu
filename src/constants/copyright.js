@@ -58,7 +58,8 @@ export const introAssets = {
         "input": {
             "placeholder": "Электронная почта",
             "name": "mail",
-            "autocomplite": "true"
+            "autocomplite": "true",
+            "enterkeyhint": "done",
         },
         "button": {
             "text": "Начать",
@@ -543,11 +544,13 @@ export const feedbackAssets = {
         "email": {
             "placeholder": "Электронная почта",
             "name": "mail",
-            "autocomplite": "true"
+            "autocomplite": "true",
+            "enterkeyhint": "next",
         },
         "message": {
             "placeholder": "О чем хотите расссказать?",
             "name": "text",
+            "enterkeyhint": "done",
         },
         "button": {
             "text": "отправить",
