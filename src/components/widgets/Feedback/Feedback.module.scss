@@ -5,9 +5,9 @@
 .section {
   @include mixins.resize(padding-top, 80, 23);
   @include mixins.resize(padding-bottom, 82, 263);
+  @include mixins.resize(border-radius, 20, 20);
+  @include mixins.resize(margin-top, -50, -50);
   background-color: white;
-  border-radius: 20px;
-  margin-top: -50px;
   position: relative;
 }
 
@@ -17,15 +17,11 @@
   @include mixins.resize(padding-bottom, 80, 34);
   @include mixins.resize(padding-right, 64, 15);
   @include mixins.resize(border-radius, 30, 20);
-  max-width: 867px;
+  @include mixins.resize(max-width, 876, 335);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: #F7F7F7;
-
-  @include adaptive.MOBILE {
-    width: 100%;
-  }
 }
 
 
@@ -33,24 +29,23 @@
   @include mixins.resize(font-size, 72, 32);
   @include mixins.resize(line-height, 80, 48);
   @include mixins.resize(margin-bottom, 40, 20);
+  @include mixins.resize(letter-spacing, -2, -2);
   font-family: variables.$font-family-secondary;
   font-weight: variables.$font-weight-medium;
   color: black;
-  letter-spacing: -2px;
 }
 
 .input,
 .textarea {
   @include mixins.resize(font-size, 28, 20);
-  @include mixins.resize(line-height, 40, 38);
   @include mixins.resize(border-radius, 30, 20);
+  @include mixins.resize(letter-spacing, -0.1, -0.1);
   width: 100%;
   border: 2px solid #B0B1C1;
   background-color: white;
   font-family: variables.$font-family-primary;
   font-weight: variables.$font-weight-regular;
   outline: none;
-  letter-spacing: -0.1px;
 
   &::placeholder {
     color: #B0B1C1;
@@ -62,6 +57,7 @@
   @include mixins.resize(padding-left, 24, 16);
   @include mixins.resize(padding-right, 24, 16);
   @include mixins.resize(margin-bottom, 16, 10);
+  @include mixins.resize(line-height, 40, 38);
 }
 
 .textarea {
@@ -70,14 +66,11 @@
   @include mixins.resize(padding-left, 24, 16);
   @include mixins.resize(padding-right, 24, 16);
   @include mixins.resize(margin-bottom, 32, 20);
+  @include mixins.resize(line-height, 40, 26);
   resize: none;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  @include adaptive.MOBILE {
-    line-height: 26px;
   }
 }
 
@@ -86,19 +79,20 @@
   @include mixins.resize(font-size, 28, 18);
   @include mixins.resize(line-height, 48, 38);
   @include mixins.resize(border-radius, 30, 20);
+  @include mixins.resize(padding-left, 32, 32);
+  @include mixins.resize(padding-right, 32, 32);
+  @include mixins.resize(gap, 10, 10);
+  @include mixins.resize(letter-spacing, -0.1, -0.1);
   width: auto;
-  padding: 0 32px;
   display: flex;
   align-items: center;
-  gap: 10px;
   font-family: variables.$font-family-primary;
   font-weight: variables.$font-weight-medium;
-  letter-spacing: -0.1px;
   background-color: black;
   border: 3px solid black;
   color: white;
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     width: 100%; 
     justify-content: center;
   }

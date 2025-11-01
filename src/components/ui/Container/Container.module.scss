@@ -1,5 +1,4 @@
 @use "../../../assets/styles/mixins.scss";
-@use "../../../assets/styles/variables.scss";
 
 .container {
     @include mixins.resize(max-width, 1312, 335);

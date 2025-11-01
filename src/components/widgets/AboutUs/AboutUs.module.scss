@@ -4,23 +4,21 @@
 
 .section {
   @include mixins.resize(padding-top, 64, 40);
+  @include mixins.resize(border-radius, 20, 20);
+  @include mixins.resize(margin-top, -50, -50);
   background-color: white;
-  border-radius: 20px;
-  margin-top: -50px;
 }
 
 .grid {
   @include mixins.resize(gap, 24, 10);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 826px 884px 530px;
   grid-template-areas: "block_1 block_1 block_1 block_2 block_2 block_2"
                        "block_3 block_3 block_3 block_3 block_3 block_3"
                        "block_4 block_4 block_5 block_5 block_6 block_6";
 
   @include adaptive.MOBILE {
-    grid-template-columns: 335px;
-    grid-template-rows: 391px 391px 649px 208px 208px 208px;
+    @include mixins.resize(grid-template-columns, 0, 335);
     grid-template-areas: "block_1"
                          "block_2"
                          "block_3"
@@ -41,29 +39,38 @@
   position: relative;
 
   &:nth-child(1) {
+    @include mixins.resize(height, 826, 391);
     grid-area: block_1;
 
     .image {
+      @include mixins.resize(width, 350, 114);
+      @include mixins.resize(height, 350, 114);
       margin-bottom: 24px;
     }
   }
 
   &:nth-child(2) {
+    @include mixins.resize(height, 826, 391);
     grid-area: block_2;
 
     .image {
+      @include mixins.resize(width, 644, 335);
+      @include mixins.resize(height, 350, 182);
+      @include mixins.resize(bottom, 24, 24);
       position: absolute;
-      bottom: 24px;
     }
   }
 
   &:nth-child(3) {
+    @include mixins.resize(height, 884, 649);
     grid-area: block_3;
 
     .image {
+      @include mixins.resize(width, 400, 210);
+      @include mixins.resize(height, 300, 157.5);
+      @include mixins.resize(margin-top, 24, 24);
+      @include mixins.resize(margin-bottom, 24, 24);
       order: 3;
-      margin-top: 24px;
-      margin-bottom: 24px;
     }
 
     .points {
@@ -72,16 +79,22 @@
   }
 
   &:nth-child(4) {
+    @include mixins.resize(height, 530, 208);
     grid-area: block_4;
     text-align: left;
+
+    .title {
+      @include mixins.resize(margin-bottom, 20, 20);
+    }
   }
 
   &:nth-child(5) {
+    @include mixins.resize(height, 530, 208);
     grid-area: block_5;
 
     .image {
-      width: 580px;
-      height: 580px;
+      @include mixins.resize(width, 580, 374.25);
+      @include mixins.resize(height, 580, 266.45);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -91,28 +104,37 @@
   }
 
   &:nth-child(6) {
+    @include mixins.resize(height, 530, 208);
     grid-area: block_6;
     text-align: left;
+
+    .description {
+      @include mixins.resize(max-width, 373, 210);
+    }
+
+    .title {
+      @include mixins.resize(margin-bottom, 20, 20);
+    }
   }
 
-  @media (max-width: 1440px) {
+  @include adaptive.MOBILE {
     &:nth-child(1) {
-      padding-top: 25px;
+      @include mixins.resize(padding-top, 0, 25);
 
       .image {
-        margin-bottom: 20px;
+        @include mixins.resize(margin-bottom, 0, 20);
       }
 
       .description {
-        max-width: 220px;
+        @include mixins.resize(max-width, 0, 220);
       }
     }
 
     &:nth-child(2) {
-      padding-top: 25px;
+      @include mixins.resize(padding-top, 0, 25);
 
       .description {
-        max-width: 250px;
+        @include mixins.resize(max-width, 0, 250);
       }
 
       .image {
@@ -121,41 +143,25 @@
     }
 
     &:nth-child(3) {
-      padding-top: 25px;
+      @include mixins.resize(padding-top, 0, 25);
 
       .description {
-        max-width: 305px;
+        @include mixins.resize(max-width, 0, 305);
       }
 
       .image {
-        margin-top: 20px;
-        margin-bottom: 24px;
+        @include mixins.resize(margin-top, 0, 20);
+        @include mixins.resize(margin-bottom, 0, 24);
       }
     }
 
     &:nth-child(4),
     &:nth-child(6) {
-      padding: 20px 24px 30px 15px;
+      @include mixins.resize(padding-top, 20, 20);
+      @include mixins.resize(padding-right, 24, 24);
+      @include mixins.resize(padding-bottom, 30, 30);
+      @include mixins.resize(padding-left, 15, 15);
       align-items: flex-start;
-
-      .title {
-        margin-bottom: 20px;
-      }
-    }
-
-    &:nth-child(5) {
-      
-      .image {
-        width: 374px;
-        height: 266px;
-        top: 47%;
-      }
-    }
-
-    &:nth-child(6) {
-      .description {
-        max-width: 210px;
-      }
     }
   }
 }
@@ -173,17 +179,16 @@
 .description {
   @include mixins.resize(font-size, 44, 20);
   @include mixins.resize(line-height, 52, 22);
-  max-width: 865px;
+  @include mixins.resize(max-width, 865, 865);
+  @include mixins.resize(letter-spacing, -0.1, -0.1);
   font-family: variables.$font-family-primary;
   font-weight: variables.$font-weight-regular;
-  letter-spacing: -0.1px;
 }
 
 .points {
   @include mixins.resize(gap, 24, 10);
   @include mixins.resize(display, 24, 10);
-  @include mixins.resize(gap, 24, 10);
-  max-width: 1072px;
+  @include mixins.resize(max-width, 1072, 224);
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 38px 1fr 38px 1fr;
@@ -202,12 +207,12 @@
 .text {
   @include mixins.resize(font-size, 44, 20);
   @include mixins.resize(line-height, 52, 22);
+  @include mixins.resize(letter-spacing, -0.1, -0.1);
   font-family: variables.$font-family-primary;
   font-weight: variables.$font-weight-regular;
-  letter-spacing: -0.1px;
 
   @include adaptive.MOBILE {
-    max-width: 223px;
+    @include mixins.resize(max-width, 223, 223);
   }
 }
 
@@ -217,8 +222,8 @@
   justify-content: center;
 
   @include adaptive.MOBILE {
-    width: 27px;
-    height: 22px;
+    @include mixins.resize(width, 27, 27);
+    @include mixins.resize(height, 22, 22);
     transform: rotate(90deg);
   }
 }

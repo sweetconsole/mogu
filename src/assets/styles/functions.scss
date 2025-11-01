@@ -9,7 +9,7 @@
 }
 
 @function toVWMobile($value) {
-  @return 100vw * ($value / variables.$heightTemplateDesktop);
+  @return 100vw * ($value / variables.$widthTemplateMobile);
 }
 
 @function toVHMobile($value) {

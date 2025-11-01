@@ -4,10 +4,10 @@
 
 .section {
   @include mixins.resize(padding-top, 64, 30);
-  @include mixins.resize(padding-bottom, 150, 84);
+  @include mixins.resize(padding-bottom, 200, 125);
+  @include mixins.resize(border-radius, 20, 20);
+  @include mixins.resize(margin-top, -50, -50);
   background-color: #DAD4C5;
-  border-radius: 20px;
-  margin-top: -50px;
 }
 
 .block {
@@ -21,7 +21,6 @@
 
   @include adaptive.MOBILE {
     flex-direction: column;
-    gap: 25px;
   }
 }
 
@@ -51,15 +50,16 @@
   @include mixins.resize(font-size, 16, 14);
   @include mixins.resize(line-height, 48, 41);
   @include mixins.resize(gap, 12, 14);
+  @include mixins.resize(border-radius, 12, 12);
+  @include mixins.resize(letter-spacing, 0.1, 0.1);
   display: flex;
   align-items: center;
-  border-radius: 12px;
   background-color: #FFFFFF;
   color: #5B605C;
   font-weight: variables.$font-weight-medium;
-  letter-spacing: 0.1px;
   cursor: pointer;
   user-select: none;
+  transition: all 0.3s ease-in-out;
 } 
 
 .topic_active {
@@ -73,82 +73,38 @@
   cursor: not-allowed;
 }
 
-.title_block {
-  @include mixins.resize(margin-bottom, 8, 3);
-  @include mixins.resize(height, 48, 48);
-  @include mixins.resize(line-height, 48, 48);
-  position: relative;
-
-  @include adaptive.MOBILE {
-    font-size: 24px;
-  }
-}
-
-.title,
-.title_selected {
-  @include mixins.resize(font-size, 32, 24);
-  @include mixins.resize(line-height, 48, 48);
-  font-weight: variables.$font-weight-medium;
-  letter-spacing: -0.1px;
-  color: black;
-  position: absolute;
-  white-space: nowrap;
-  transition: all 0.5s linear;
+.animation_block {
+  transition: all 0.3s ease-in-out;
 }
 
 .title {
-  opacity: 0;
-}
-
-.title_selected {
-  opacity: 1;
-}
-
-.description_block {
-  @include mixins.resize(height, 325, 270);
-  position: relative;
-}
-
-.description,
-.description_selected {
-  @include mixins.resize(font-size, 22, 16);
-  @include mixins.resize(line-height, 36, 30);
-  letter-spacing: -0.2px;
-  color: #5B605C;
-  position: absolute;
-  transition: all 0.5s linear;
+  @include mixins.resize(font-size, 32, 24);
+  @include mixins.resize(line-height, 48, 48);
+  @include mixins.resize(margin-bottom, 8, 3);
+  @include mixins.resize(letter-spacing, -0.1, -0.1);
+  font-weight: variables.$font-weight-medium;
+  color: black;
+  white-space: nowrap;
 }
 
 .description {
-  opacity: 0;
+  @include mixins.resize(font-size, 22, 16);
+  @include mixins.resize(line-height, 36, 30);
+  @include mixins.resize(letter-spacing, -0.2, -0.2);
+  color: #5B605C;
 }
 
-.description_selected {
-  opacity: 1;
-}
-
-.image,
-.image_selected {
+.image {
   @include mixins.resize(width, 859, 325);
   @include mixins.resize(height, 704, 260);
-  position: absolute;
-  right: 8px;
-  transition: all 0.5s linear;
+  transition: all 0.3s ease-in-out;
+
+  picture {
+    width: 100%;
+    height: 100%
+  }
 
   img {
     @include mixins.resize(border-radius, 25, 15);
   }
-
-  @include adaptive.MOBILE {
-    bottom: 5px;
-    left: 5px;
-  }
-}
-
-.image {
-  opacity: 0;
-}
-
-.image_selected {
-  opacity: 1;
 }

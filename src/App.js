@@ -27,9 +27,9 @@ const App = () => {
         }
       } else {
         if ((width / height) >= (widthMobile / heightMobile)) {
-          document.getElementById("html").className = "landscape-mobile"
-        } else {
           document.getElementById("html").className = "portrait-mobile"
+        } else {
+          document.getElementById("html").className = "landscape-mobile"
         }
       }
     }

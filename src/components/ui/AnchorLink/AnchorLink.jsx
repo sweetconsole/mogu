@@ -1,6 +1,6 @@
 import { Link } from "react-scroll"
 
-const AnchorLink = ({className, to, children, onClick}) => {
+const AnchorLink = ({className, to, onClick, children}) => {
   return (
     <Link 
       className={className} 

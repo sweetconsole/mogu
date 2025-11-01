@@ -1,13 +1,12 @@
-@use "../../../assets/styles/variables.scss";
 @use "../../../assets/styles/mixins.scss";
 @use "../../../assets/styles/adaptive.scss";
 
 .section {
   @include mixins.resize(height, 1050, 1040);
   @include mixins.resize(padding-top, 200, 40);
+  @include mixins.resize(border-radius, 20, 20);
+  @include mixins.resize(margin-top, 127, 127);
   background-color: #2B2B2B;
-  border-radius: 20px;
-  margin-top: 127px;
 }
 
 .block {
@@ -23,7 +22,7 @@
   z-index: 2;
 
   picture {
-    @include mixins.resize(widht, 319.86, 181.54);
+    @include mixins.resize(width, 319.86, 181.54);
     @include mixins.resize(height, 262.74, 149.12);
   }
 }
@@ -35,7 +34,7 @@
   z-index: 2;
 
   picture {
-    @include mixins.resize(widht, 291.97, 165.71);
+    @include mixins.resize(width, 291.97, 165.71);
     @include mixins.resize(height, 225.22, 127.83);
   }
 }
@@ -47,7 +46,7 @@
   z-index: 1;
 
   picture {
-    @include mixins.resize(widht, 320.5, 182.97);
+    @include mixins.resize(width, 320.5, 182.97);
     @include mixins.resize(height, 324.44, 185.22);
   }
 }
@@ -59,7 +58,7 @@
   z-index: 2;
 
   picture {
-    @include mixins.resize(widht, 200.6, 114.52);
+    @include mixins.resize(width, 200.6, 114.52);
     @include mixins.resize(height, 336, 191.82);
   }
 }
@@ -71,7 +70,7 @@
   z-index: 1;
 
   picture {
-    @include mixins.resize(widht, 280.74, 169.27);
+    @include mixins.resize(width, 280.74, 169.27);
     @include mixins.resize(height, 286.87, 172.97);
   }
 }

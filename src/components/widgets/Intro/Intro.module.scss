@@ -1,4 +1,4 @@
-@use "../../../assets/styles/variables.scss";
+@use "../../../assets/styles/adaptive.scss";
 @use "../../../assets/styles/mixins.scss";
 
 .section {
@@ -6,7 +6,7 @@
     justify-content: space-between;
     position: relative;
 
-    @media (max-width: #{variables.$NotMobile}px) {
+    @include adaptive.MOBILE {
         display: block;
     }
 }

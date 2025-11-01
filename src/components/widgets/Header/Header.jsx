@@ -17,10 +17,7 @@ const Header = () => {
 		} else {
 			document.body.style.overflow = "hidden"
 		}
-  }
-
-  console.log("styles.logo",styles.logo);
-  
+  }  
 
   return (
     <header className={styles.header}>

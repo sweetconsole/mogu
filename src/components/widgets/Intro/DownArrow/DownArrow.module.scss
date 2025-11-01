@@ -1,6 +1,6 @@
 @use "../../../../assets/styles/variables.scss";
 @use "../../../../assets/styles/mixins.scss";
-
+@use "../../../../assets/styles/adaptive.scss";
 
 .link {
     @include mixins.resizeDesktop(width, 64);
@@ -17,7 +17,7 @@
         @include mixins.resizeDesktop(padding-bottom, 30);
     }
 
-    @media (max-width: #{variables.$NotMobile}px) {
+    @include adaptive.MOBILE {
         display: none;
     }
 }

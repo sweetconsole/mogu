@@ -17,11 +17,11 @@
 @mixin resizeMobile($property, $template) {
   @include adaptive.MOBILE() {
     :global(.landscape-mobile) &{
-       #{$property}: functions.toVHMobile($template);
+       #{$property}: functions.toVWMobile($template);
     }
 
     :global(.portrait-mobile) &{
-       #{$property}: functions.toVWMobile($template);
+       #{$property}: functions.toVHMobile($template);
     }
   }
 }

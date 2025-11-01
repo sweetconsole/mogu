@@ -39,6 +39,7 @@
   "devDependencies": {
     "framer-motion": "^12.23.24",
     "react-scroll": "^1.9.3",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.93.2"
   }
 }
