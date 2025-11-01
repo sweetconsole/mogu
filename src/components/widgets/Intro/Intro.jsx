@@ -1,5 +1,5 @@
 import { introAssets } from "../../../constants/copyright"
-import Container from "../../ui/Container/Container"
+import Container from "../../general/Container/Container"
 import LeftBlock from "./LeftBlock/LeftBlock"
 import RightBlock from "./RightBlock/RightBlock"
 import DownArrow from "./DownArrow/DownArrow"

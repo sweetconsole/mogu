@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import Picture from "../../../ui/Picture/Picture"
+import Picture from "../../../general/Picture/Picture"
 import styles from "./Message.module.scss"
 
 const Message = ({text, type, color, cursor, duration}) => {

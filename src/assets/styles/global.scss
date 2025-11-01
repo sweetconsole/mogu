@@ -1,12 +1,8 @@
-@use "./variables.scss";
-@use "./functions.scss";
-@use "./mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 
-body {
-  font-family: 'Times New Roman', serif;
-  color: red;
-  font-size: 32px;
+*::selection {
+  background-color: rgba(34, 47, 220, 0.75);
+  color: white;
 }
 
 a, button {

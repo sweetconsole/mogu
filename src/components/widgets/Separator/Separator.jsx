@@ -1,5 +1,5 @@
 import { separatorAsset } from '../../../constants/copyright'
-import Picture from '../../ui/Picture/Picture'
+import Picture from '../../general/Picture/Picture'
 import styles from "./Separator.module.scss"
 
 const Separator = () => {

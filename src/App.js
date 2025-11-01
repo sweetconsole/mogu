@@ -15,7 +15,7 @@ const App = () => {
   const notMobile = 1023
 
   useEffect(() => {
-    const typeScreen = () => {
+    const handleScreen = () => {
       const width = window.screen.width
       const height = window.screen.height
 
@@ -34,9 +34,9 @@ const App = () => {
       }
     }
 
-    window.addEventListener("resize", typeScreen)
+    window.addEventListener("resize", handleScreen)
 
-    typeScreen()
+    handleScreen()
   }, [])
 
   return (

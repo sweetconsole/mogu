@@ -1,6 +1,6 @@
 import { headerAssets } from "../../../../constants/copyright"
-import Container from "../../../ui/Container/Container"
-import AnchorLink from "../../../ui/AnchorLink/AnchorLink"
+import Container from "../../../general/Container/Container"
+import AnchorLink from "../../../general/AnchorLink/AnchorLink"
 import styles from "./Menu.module.scss"
 import { Fragment } from "react/jsx-runtime"
 

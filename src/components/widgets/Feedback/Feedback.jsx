@@ -1,6 +1,6 @@
 import { feedbackAssets } from "../../../constants/copyright"
-import Container from "../../ui/Container/Container"
-import Picture from "../../ui/Picture/Picture"
+import Container from "../../general/Container/Container"
+import Picture from "../../general/Picture/Picture"
 import Cat from "./Cat"
 import styles from "./Feedback.module.scss"
 

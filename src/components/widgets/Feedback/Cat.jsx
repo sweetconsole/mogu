@@ -1,8 +1,8 @@
 import { feedbackAssets } from "../../../constants/copyright"
-import Picture from "../../ui/Picture/Picture"
+import {useMediaQuery} from "../../../hooks/useMediaQuery";
+import Picture from "../../general/Picture/Picture"
 import Eye from "./Eye";
 import styles from "./Feedback.module.scss"
-import {useMediaQuery} from "../../../hooks/useMediaQuery";
 
 const Cat = () => {
   const desktop= useMediaQuery("(min-width: 1024px)")

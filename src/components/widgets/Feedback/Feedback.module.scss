@@ -114,6 +114,7 @@
     @include mixins.resize(left, 93, 47);
     position: absolute;
     display: block;
+    cursor: pointer;
     content: "";
     background-color: black;
     opacity: 0;
@@ -127,6 +128,10 @@
     &::before {
       opacity: 1;
     }
+  }
+
+  picture {
+    cursor: pointer;
   }
 }
 

@@ -21,6 +21,7 @@
 }
 
 .block {
+    @include mixins.resize(gap, 24, 24);
     display: flex;
 }
 

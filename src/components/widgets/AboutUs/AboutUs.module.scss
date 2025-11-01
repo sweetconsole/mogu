@@ -47,6 +47,11 @@
       @include mixins.resize(height, 350, 114);
       margin-bottom: 24px;
     }
+
+    &::selection {
+      background-color: red;
+      color: green;
+    }
   }
 
   &:nth-child(2) {

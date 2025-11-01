@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { introAssets } from "../../../../constants/copyright"
-import Picture from "../../../ui/Picture/Picture"
+import Picture from "../../../general/Picture/Picture"
 import Message from "../Message/Message"
 import styles from "./RightBlock.module.scss"
 

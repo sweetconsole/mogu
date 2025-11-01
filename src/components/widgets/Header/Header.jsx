@@ -1,8 +1,8 @@
 import { Fragment, useState } from "react"
 import { headerAssets } from "../../../constants/copyright"
-import Container from "../../ui/Container/Container"
-import Picture from "../../ui/Picture/Picture"
-import AnchorLink from "../../ui/AnchorLink/AnchorLink"
+import Container from "../../general/Container/Container"
+import Picture from "../../general/Picture/Picture"
+import AnchorLink from "../../general/AnchorLink/AnchorLink"
 import Menu from "./Menu/Menu"
 import styles from "./Header.module.scss"
 

@@ -1,5 +1,5 @@
 import { Link } from "react-scroll"
-import Picture from "../../../ui/Picture/Picture"
+import Picture from "../../../general/Picture/Picture"
 import styles from "./DownArrow.module.scss"
 
 const DownArrow = ({image, link}) => {
